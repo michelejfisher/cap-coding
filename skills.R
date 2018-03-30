@@ -1,9 +1,12 @@
 library(wordcloud)
+
 # read file with skills and frequency from LinkedIn
 skills <- read.csv("skills.csv", header=T)
+
 # Create a bar plot of skill frequencies
 m.skills=t(as.matrix(skills))
 barplot(m.skills[1:10], col="tan")
+
 # Create a wordcloud of skills
 pal <- brewer.pal(9,"BuGn")
 pal <- pal[-(1:4)]
